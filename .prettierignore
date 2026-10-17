@@ -1,0 +1,6 @@
+.qa/
+node_modules/
+dist/
+coverage/
+build/
+_site/

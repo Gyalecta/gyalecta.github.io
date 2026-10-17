@@ -1,0 +1,52 @@
+{
+  "loadingScreen": {
+    "name": "Domenico",
+    "lastname": "Avino"
+  },
+  "personal": {
+    "fullname": "Domenico Avino",
+    "title": "Computer Science student | University of Salerno",
+    "email": "domenico.avino@proton.me",
+    "location": "Province of Naples, Italy",
+    "bio": "I study Computer Science at the University of Salerno and I am especially interested in exploring backend development. Outside my studies, I enjoy technology, astronomy, and music, and I am always open to trying new experiences and learning opportunities.",
+    "avatar": "profile.webp"
+  },
+  "social": {
+    "github": "https://github.com/Gyalecta",
+    "linkedin": "https://www.linkedin.com/in/domenicoavino/",
+    "email": "domenico.avino@proton.me",
+    "location": "Province of Naples, Italy"
+  },
+  "projects": [],
+  "experience": [],
+  "education": [
+    {
+      "institution": "University of Salerno",
+      "degree": "Bachelor's Degree in Computer Science",
+      "period": "2024 – present"
+    },
+    {
+      "institution": "I.S.I.S. Einaudi-Giordano",
+      "degree": "Diploma in Computer Science and Telecommunications",
+      "period": "2019 – 2024"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Google AI",
+      "detail": "Artificial intelligence certifications"
+    },
+    {
+      "name": "English for IT",
+      "detail": "B2 level"
+    },
+    {
+      "name": "GESE Grade 7",
+      "detail": "B2.1 level"
+    },
+    {
+      "name": "Cisco Cybersecurity Scholarship",
+      "detail": "Program participant"
+    }
+  ]
+}

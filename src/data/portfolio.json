@@ -1,0 +1,52 @@
+{
+  "loadingScreen": {
+    "name": "Domenico",
+    "lastname": "Avino"
+  },
+  "personal": {
+    "fullname": "Domenico Avino",
+    "title": "Studente di Informatica | Università degli Studi di Salerno",
+    "email": "domenico.avino@proton.me",
+    "location": "Provincia di Napoli, Italia",
+    "bio": "Studio Informatica all'Università degli Studi di Salerno e sto esplorando con particolare interesse lo sviluppo backend. Nel tempo libero coltivo le mie passioni per la tecnologia, l'astronomia e la musica, e sono sempre aperto a provare cose nuove e a cogliere opportunità di apprendimento.",
+    "avatar": "profile.webp"
+  },
+  "social": {
+    "github": "https://github.com/Gyalecta",
+    "linkedin": "https://www.linkedin.com/in/domenicoavino/",
+    "email": "domenico.avino@proton.me",
+    "location": "Provincia di Napoli, Italia"
+  },
+  "projects": [],
+  "experience": [],
+  "education": [
+    {
+      "institution": "Università degli Studi di Salerno",
+      "degree": "Laurea Triennale in Informatica",
+      "period": "2024 – presente"
+    },
+    {
+      "institution": "I.S.I.S. Einaudi-Giordano",
+      "degree": "Diploma in Informatica e Telecomunicazioni",
+      "period": "2019 – 2024"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Google AI",
+      "detail": "Certificazioni sull'intelligenza artificiale"
+    },
+    {
+      "name": "English for IT",
+      "detail": "Livello B2"
+    },
+    {
+      "name": "GESE Grade 7",
+      "detail": "Livello B2.1"
+    },
+    {
+      "name": "Cisco Cybersecurity Scholarship",
+      "detail": "Partecipante al programma"
+    }
+  ]
+}

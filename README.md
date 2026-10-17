@@ -1,33 +1,44 @@
 # Portfolio di Domenico Avino
 
-Portfolio personale statico, bilingue italiano/inglese, pubblicato con GitHub Pages. Presenta il percorso di studi, gli interessi, le certificazioni e i contatti di Domenico Avino. Il pulsante GitHub porta al profilo personale.
+Portfolio personale bilingue italiano/inglese costruito con React, TypeScript, Vite e Tailwind CSS. L'interfaccia riprende il template Windows XP di [fsystemweb/xp-portfolio](https://github.com/fsystemweb/xp-portfolio), personalizzato per Domenico Avino a partire dal commit [`54ff0ca`](https://github.com/fsystemweb/xp-portfolio/commit/54ff0ca45465ef142054032ccf73f01e598bbc4b).
 
-## Struttura
+## Sviluppo locale
 
-- `index.html`: contenuti e struttura della pagina.
-- `styles.css`: layout responsive e stile visivo.
-- `script.js`: cambio lingua e interazioni.
-- `assets/portrait.webp`: copia ottimizzata della foto fornita, inquadrata con CSS.
-- `assets/m7-hubble.webp` e `assets/saturn-cassini.jpg`: fotografie astronomiche reali Hubble e Cassini.
-- `assets/icons/`: SVG originali Bootstrap Icons, usati anche per la favicon.
-- `assets/credits.txt`: fonti, attribuzioni e riferimenti alle licenze incluse.
-- `assets/manrope-latin.ttf`: carattere Manrope ospitato localmente.
-- `.github/workflows/deploy.yml`: pubblicazione su GitHub Pages senza fase di build.
-
-## Anteprima locale
-
-Dalla cartella principale del repository:
+Richiede Node.js 24 e usa le versioni bloccate in `package-lock.json`.
 
 ```bash
-python -m http.server 4173 --bind 127.0.0.1
+npm ci
+npm run dev -- --host 127.0.0.1
 ```
 
-Aprire `http://127.0.0.1:4173/`. La lingua iniziale è l'italiano; la scelta IT/EN viene salvata nel browser. Per aprire direttamente la versione inglese usare `http://127.0.0.1:4173/?lang=en`.
+Aprire l'indirizzo mostrato da Vite, normalmente `http://127.0.0.1:5173/`.
 
-Non sono richieste dipendenze o una fase di build. I testi di base restano leggibili in italiano anche senza JavaScript. Tutte le icone e le fotografie sono asset esistenti salvati nel repository; non vengono caricate da CDN a ogni visita.
+Prima della pubblicazione:
+
+```bash
+npm run typecheck
+npm test -- --run
+npm run build
+```
+
+Il build di produzione viene scritto in `dist/` con base `/`, adatta al sito utente <https://gyalecta.github.io/>.
+
+## Contenuti e lingua
+
+- `src/data/portfolio.json` contiene i dati del portfolio.
+- `src/components/` contiene desktop, barra delle applicazioni e finestre.
+- `src/index.css` contiene lo stile dell'interfaccia.
+- `public/images/` contiene immagini e icone servite senza trasformazioni.
+- `src/components/__tests__/` contiene i test Vitest; `src/setup-tests.ts` configura i matcher del DOM.
+
+L'italiano è la lingua predefinita. La scelta viene salvata nel browser con la chiave `portfolio-language`; il parametro `?lang=it` o `?lang=en` ha precedenza sul valore salvato. Il pulsante della lingua nella system tray permette di passare tra IT e EN.
 
 ## Pubblicazione
 
-Nel repository `Gyalecta/gyalecta.github.io`, aprire **Settings → Pages** e impostare **Source** su **GitHub Actions**. Ogni push sul branch `main`, oppure un avvio manuale del workflow, pubblica esclusivamente i file del sito preparati in `_site`.
+Il workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) installa con `npm ci`, esegue type-check, test e build, quindi pubblica esclusivamente `dist/` su GitHub Pages. La pubblicazione parte da ogni push su `main` o manualmente; il job di deploy viene eseguito soltanto se tutti i controlli del job di build hanno successo.
 
-Il sito sarà disponibile all'indirizzo <https://gyalecta.github.io/>. Per annullare una versione, eseguire il revert del commit interessato su `main` e pubblicare il nuovo commit: il workflow ricrea un artefatto immutabile dai file ripristinati.
+Per ripristinare una versione precedente, eseguire il revert del commit interessato su `main` e avviare nuovamente il workflow. Le dipendenze restano determinate da `package-lock.json` e ogni esecuzione produce un nuovo artefatto Pages dal contenuto ripristinato.
+
+## Provenienza
+
+Il README originale del template è conservato in [`docs/upstream-xp-README.md`](docs/upstream-xp-README.md). Le condizioni dichiarate dall'autore e le note sugli asset sono riepilogate in [`NOTICE.md`](NOTICE.md).
