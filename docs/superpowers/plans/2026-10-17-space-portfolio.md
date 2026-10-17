@@ -30,6 +30,6 @@
 - [x] Deployment worker: create .github/workflows/deploy.yml and README.md; verify official Actions and repository state.
 - [x] Root: serve locally; inspect page and test language, persistence, anchors, links, keyboard and blocked-storage behavior. Responsive widths 320, 375, 620, 768 and 1440 have no horizontal overflow; keyboard skip link focuses main; browser error/warning log is empty.
 - [x] Independent reviewer: check correctness, accessibility and brief coverage; root resolves actionable issues. Degree level confirmed in original user brief; OG metadata localized; optimized portrait; icon filters and license summary corrected; favicon derived from licensed icon for dark-tab visibility.
-- [ ] Root: commit, push main, enable GitHub Actions as Pages source, verify deployment and open the public result.
+- [x] Root: commit, push main, enable GitHub Actions as Pages source, verify deployment and open the public result. Workflow 39063413907 succeeded for site commit 830ab8ce5af4c002b27357633b4374d07da43802; https://gyalecta.github.io/ returns HTTP 200 and the published language switch updates the page and metadata.
 
 Local verification uses browser behavior checks appropriate to this static portfolio; a test framework is not added for low-impact presentational content.
