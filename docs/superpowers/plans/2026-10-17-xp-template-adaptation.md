@@ -19,4 +19,4 @@
 - [x] Root: integrate locale, taskbar, loader, window state, metadata and source-fidelity fixes; 27 tests, typecheck and production build pass.
 - [x] Root: browser comparison with original on desktop and mobile (1280, 375, 320 pixels), startup, dragging, window order, menus and links. No horizontal overflow or console errors/warnings; all referenced images load.
 - [x] Independent reviewer: inspect integrated result and resolve actionable findings. Review clean; retained template assets hash-match upstream; notices preserve the original permission statement.
-- [ ] Root: publish main and verify workflow/live site; keep the new portfolio open.
+- [x] Root: publish main and verify workflow/live site. GitHub Actions run 39065735889 passed install, typecheck, tests, build and deploy for commit 30e66e8289e778ab17f3787a3f5c05a7013f1578. https://gyalecta.github.io/ serves the new XP portfolio and original template assets successfully; personalized startup verified in browser.
